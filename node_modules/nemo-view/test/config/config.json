@@ -1,0 +1,31 @@
+{
+  "plugins": {
+    "view": {
+      "module": "path:../",
+      "arguments": ["path:locator"]
+    },
+    "login": {
+      "module": "path:plugin/shared-fn-plugin",
+      "arguments": ["login"]
+    }
+  },
+  "driver": {
+    "builders": {
+      "withCapabilities": [
+        {
+          "browserName": "chrome",
+          "chromeOptions": {
+            "args": [
+              "headless",
+              "window-size=1200,800"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "data": {
+    "baseUrl": "http://warm-river-3624.herokuapp.com",
+    "passThroughFromJson": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "selectParent": {
+    "locator": "wrapper",
+    "type": "id"
+  },
+  "select": {
+    "locator": "selectWithValues",
+    "type": "id"
+  }
+}
