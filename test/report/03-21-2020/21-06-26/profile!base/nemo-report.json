@@ -1,0 +1,146 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-22T01:06:26.627Z",
+    "end": "2020-03-22T01:06:26.697Z",
+    "duration": 70,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "d7171d95-5dc2-4dcf-9cfa-459d444399ea",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a825447b-fc2a-45d3-a182-11565a099db8",
+          "title": "@firstTest@",
+          "fullFile": "/home/eric/Projects2020/DemoNemo/test/nemo.test.js",
+          "file": "/test/nemo.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook for \"should load a website\"",
+              "fullTitle": "@firstTest@ \"before all\" hook for \"should load a website\"",
+              "timedOut": false,
+              "duration": 56,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "if (Suite.tests.length > 0) {\n  return createNemo()\n    .then(bindNemo.bind(this));\n}\nreturn;",
+              "err": {
+                "message": "Error: The ChromeDriver could not be found on the current PATH. Please download the latest version of the ChromeDriver from http://chromedriver.storage.googleapis.com/index.html and ensure it can be found on your PATH.",
+                "estack": "Error: The ChromeDriver could not be found on the current PATH. Please download the latest version of the ChromeDriver from http://chromedriver.storage.googleapis.com/index.html and ensure it can be found on your PATH.\n    at new ServiceBuilder (node_modules/selenium-webdriver/chrome.js:215:13)\n    at getDefaultService (node_modules/selenium-webdriver/chrome.js:304:22)\n    at Function.createSession (node_modules/selenium-webdriver/chrome.js:752:44)\n    at createDriver (node_modules/selenium-webdriver/index.js:170:33)\n    at Builder.build (node_modules/selenium-webdriver/index.js:642:16)\n    at Object.doSetup [as setup] (node_modules/nemo-core/lib/driver.js:123:28)\n    at driversetup (node_modules/nemo-core/lib/setup.js:55:16)\n    at nextTask (node_modules/nemo-core/node_modules/async/dist/async.js:5324:14)\n    at next (node_modules/nemo-core/node_modules/async/dist/async.js:5331:9)\n    at /home/eric/Projects2020/DemoNemo/node_modules/nemo-core/node_modules/async/dist/async.js:969:16",
+                "diff": null
+              },
+              "uuid": "cc779ee5-096d-4597-9cf7-f0bc5b823a1e",
+              "parentUUID": "a825447b-fc2a-45d3-a182-11565a099db8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: destroyNemo",
+              "fullTitle": "@firstTest@ \"after all\" hook: destroyNemo",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "log('destroyNemo: called');\nif (this.nemo) {\n  return this.nemo && this.nemo.driver && this.nemo.driver.quit()\n    .then(function () {\n      log('destroyNemo: Quit driver');\n      return Promise.resolve();\n    });\n}",
+              "err": {},
+              "uuid": "2dccb9bd-9c7f-49a0-9f83-83751fca011b",
+              "parentUUID": "a825447b-fc2a-45d3-a182-11565a099db8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should load a website",
+              "fullTitle": "@firstTest@ should load a website",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await this.nemo.driver.get(this.nemo.data.baseUrl);",
+              "err": {},
+              "uuid": "bf41c228-2996-44ab-a773-f58bc9541778",
+              "parentUUID": "a825447b-fc2a-45d3-a182-11565a099db8",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "bf41c228-2996-44ab-a773-f58bc9541778"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 180000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "nemo-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "quiet": true,
+        "reportDir": "/home/eric/Projects2020/DemoNemo/test/report/03-21-2020/21-06-26/profile!base",
+        "reportFilename": "nemo-report",
+        "assetsDir": "/home/eric/Projects2020/DemoNemo/test/report/mochawesomeAssets"
+      },
+      "version": "4.1.0"
+    }
+  }
+}
