@@ -1,0 +1,23 @@
+{
+    "name": "nemo_automation",
+    "version": "1.0.0",
+    "description": "Demo for nemo automation",
+    "main": "index.js",
+    "scripts": {
+        "test": "run test"
+    },
+    "keywords": [
+        "nemo_auto",
+        "automation",
+        "js_automation"
+    ],
+    "author": "Uyghur",
+    "license": "ISC",
+    "devDependencies": {
+        "nemo": "^4.11.1"
+    },
+    "dependencies": {
+        "chromedriver": "^80.0.1",
+        "nemo-util": "^1.0.2"
+    }
+}
